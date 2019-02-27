@@ -1,9 +1,13 @@
 <template>
-  <div class="header">
-    <div class="avatar"><img class="image"
-           src="@/assets/images/geogoon.png">
+  <div class="header"
+       :style="{backgroundImage:'url('+backgroundImage+')'}">
+    <div class="wrapper"
+         :style="{backgroundColor:backgroundColor}">
+      <div class="avatar"><img class="image"
+             src="@/assets/images/geogoon.png">
+      </div>
+      <navBar class="nav"></navBar>
     </div>
-    <navBar class="nav"></navBar>
     <div class="title">{{title}}</div>
     <div class="desc">{{desc}}</div>
   </div>
@@ -16,6 +20,11 @@ export default {
     navBar
   },
   props: {
+    backgroundImage: String,
+    backgroundColor: {
+      type: String,
+      default: 'rgba(181, 181, 181, 0.3)'
+    },
     title: {
       type: String,
       default: '智慧机场'
@@ -33,9 +42,11 @@ export default {
   width: 100%;
   height: 699px;
   position: relative;
-  background-color: #6e7db5;
 }
-
+.header .wrapper {
+  width: 100%;
+  height: 90px;
+}
 .header .avatar {
   width: 214px;
   height: 75px;
@@ -43,7 +54,6 @@ export default {
   left: 466px;
   top: 8px;
   overflow: hidden;
-  background-color: red;
 }
 
 .header .avater .image {

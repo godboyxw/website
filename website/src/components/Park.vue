@@ -1,6 +1,8 @@
 <template>
   <div>
     <headerBar :title="title"
+               :backgroundImage="backgroundImage"
+               :backgroundColor="backgroundColor"
                :desc="desc"></headerBar>
     <div class="content">
       <div class="desc">现今生活中，停车场作为一个使用率颇高的场所，停车场依旧缺少空余车位查询和车辆导航机制，且停车场空间环境相似度高，所以在偌大停车场如何停车场找车，是不少有车一族头疼的问题。</div>
@@ -11,7 +13,8 @@
           <li class="item"
               v-for="(item,index) in park"
               :key="index">
-            <i class="icon"></i>
+            <div class="img"
+                 :style="{backgroundImage:'url('+item.img+')'}"></div>
             <div class="name">{{item.name}}</div>
             <div class="info">{{item.info}}</div>
           </li>
@@ -23,7 +26,8 @@
           <li class="item"
               v-for="(item,index) in functional"
               :key="index">
-            <i class="icon"></i>
+            <div class="icon"
+                 :style="{backgroundImage:'url('+item.icon+')'}"></div>
             <div class="name">{{item.name}}</div>
             <div class="info">{{item.info}}</div>
           </li>
@@ -73,68 +77,70 @@ export default {
   },
   data () {
     return {
+      backgroundImage: require('../assets/images/park-header.png'),
+      backgroundColor: 'rgba(49,49,49,0.65)',
       title: '智慧停车场',
       desc: '为民航行业客户提供先进的智慧商业和出行服务解决方案',
       park: [
         {
-          icon: '',
+          img: require('../assets/images/park-img1.png'),
           name: '车位状态',
           info: '以地图的形式，展示停车场车位空占状态，空占情况一目了然'
         },
         {
-          icon: '',
+          img: require('../assets/images/park-img2.png'),
           name: '车位预定',
           info: '可在地图上搜索到目的地附近有空闲车位的停车场，选好车位，提前预定车位。'
         },
         {
-          icon: '',
+          img: require('../assets/images/park-img3.png'),
           name: '室内导航',
           info: '迅速而准确的定位，帮您导航到停车位。'
         },
         {
-          icon: '',
+          img: require('../assets/images/park-img4.png'),
           name: '精准定位',
           info: '对当前停车的位置精准记录，保存到本地或服务器，便于找车。'
         },
         {
-          icon: '',
+          img: require('../assets/images/park-img5.png'),
           name: '智能寻车',
           info: '将本地或服务器记录的停车位置设置为目的地，实现反向寻车。'
         },
         {
-          icon: '',
+          img: require('../assets/images/park-img6.png'),
           name: '智能管理',
           info: '掌握机场用户轨迹、停留时间，掌握用户流峰谷，更合理的疏通客流，调整布局疏导时段'
         }
       ],
       functional: [
         {
-          icon: '',
+          icon: require('../assets/images/park-3D-icon.png'),
           name: '高标准、高还原3d地图',
           info: '业内标准规范制图工艺、误差小于10CM;高度还原停车场真是环境'
         },
         {
-          icon: '',
+          icon: require('../assets/images/park-location-icon.png'),
           name: '高精度停车场定位技术',
           info: '采用业内领先iBeacon定位技术，定位精度可达1-3米'
         },
         {
-          icon: '',
+          icon: require('../assets/images/park-voice-icon.png'),
           name: '语音+文字导航提示',
           info: '根据实时导航路径方向和距离进行语音及文字提示'
         },
         {
-          icon: '',
+          icon: require('../assets/images/park-route-icon.png'),
           name: '偏航重新规划路径',
           info: '支持用户便宜既有路径时，自动重新规划路径，使停车导航更智能'
         },
         {
-          icon: '',
+          icon: require('../assets/images/park-platform-icon.png'),
           name: '多平台实现',
           info: '支持微信公众号/iOS/Android三大主流移动端应用'
         },
         {
-          icon: '',
+          icon: require('../assets/images/park-platform-icon.png'),
           name: '快速交付、便于维护',
           info: '一般的车位停车场，可快速完成产品交付，并定期Beacon巡检维护'
         }
@@ -208,10 +214,10 @@ export default {
   position: relative;
 }
 
-.content .park .lists .item .icon {
+.content .park .lists .item .img {
   width: 58px;
   height: 58px;
-  background: rgba(98, 151, 108, 1);
+  background-size: 100% 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -270,7 +276,7 @@ export default {
   width: 141px;
   height: 141px;
   margin-bottom: 93px;
-  background: red;
+  background-size: 100% 100%;
 }
 .content .functional .lists .item .name {
   height: 28px;

@@ -9,10 +9,11 @@ module.exports = {
     'postcss-px-to-viewport': {
       unitToConvert: 'px',
       viewportWidth: 1920,
-      unitPrecision: 5,
+      unitPrecision: 10,
       propList: ['*'],
       viewportUnit: 'vw',
-      mediaQuery: true
+      mediaQuery: true,
+      minPixelValue: 1
     }
   }
 }

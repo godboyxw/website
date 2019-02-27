@@ -1,6 +1,7 @@
 <template>
   <div>
     <headerBar :title="title"
+               :backgroundImage="backgroundImage"
                :desc="desc"></headerBar>
     <div class="content">
       <div class="desc">“智慧商城”就是在传统商城和文化商城的基础上，运用物联网、云计算、移动商务和电子商务等新兴科技手段对传统商城进行数字化、智能化的一种嵌入和复合，就是让人与人、物与物更智能、更便捷地交流，它将给每个人的生活采购方式带来改变。</div>
@@ -51,6 +52,8 @@ export default {
   },
   data () {
     return {
+      backgroundImage: require('../assets/images/mall-header.png'),
+      backgroundColor: 'rgba(181, 181, 181, 0.2)',
       title: '大型商场',
       desc: '为民航行业客户提供先进的智慧商业和出行服务解决方案',
       mall: [

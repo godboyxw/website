@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headerBar></headerBar>
+    <headerBar :backgroundImage="backgroundImage"></headerBar>
     <div class="content">
       <div class="desc">智慧机场借助自助航显、自助导引、自助问询、自助行李托运、自助通关、自助登机等各种自助服务，让旅客享受服务更加便捷。机场运行信息数据的共享问题一直是机场管理的痛点。消除信息数据孤岛，实现信息数据协同共享，将对机场运行效率提升具有重要意义。</div>
       <div class="airport">
@@ -9,7 +9,8 @@
           <li class="item"
               v-for="(item,index) in airport"
               :key="index">
-            <i class="icon"></i>
+            <div class="img"
+                 :style="{backgroundImage:'url('+item.img+')'}"></div>
             <div class="name">{{item.name}}</div>
             <div class="info">{{item.info}}</div>
           </li>
@@ -22,7 +23,8 @@
           <li class="item"
               v-for="(item,index) in platform"
               :key="index">
-            <i class="icon"></i>
+            <div class="icon"
+                 :style="{backgroundImage:'url('+item.icon+')'}"></div>
             <div class="info">{{item.info}}</div>
           </li>
         </ul>
@@ -30,7 +32,7 @@
       <div class="structure">
         <div class="title">系统架构</div>
         <div class="avatar"><img class="image"
-               src="@/assets/images/structure.png"></div>
+               src="@/assets/images/airport-structure.png"></div>
       </div>
       <example></example>
       <footerBar></footerBar>
@@ -50,58 +52,59 @@ export default {
   },
   data () {
     return {
+      backgroundImage: require('../assets/images/airport-header.png'),
       airport: [
-        { icon: '',
+        { img: require('../assets/images/airport-img1.png'),
           name: '个性化信息推送',
           info: '通过室内定位技术，确定用户当前位置，提供基于顾客位置的个性化内容推送' },
-        { icon: '',
+        { img: require('../assets/images/airport-img2.png'),
           name: '泊车寻车',
           info: '停车后，记录下停车位置，返程时，将该位置设置为目的地，一键导航，方便快速寻车，还有APP定制化服务' },
-        { icon: '',
+        { img: require('../assets/images/airport-img3.png'),
           name: '交互式查询',
           info: '偌大的飞机场，购物、休息、娱乐信息搜索分类，一键导航' },
-        { icon: '',
+        { img: require('../assets/images/airport-img4.png'),
           name: '建议路线规划指示',
           info: '给用户提供合理的优化线路，引导顾客到达目的地' },
-        { icon: '',
+        { img: require('../assets/images/airport-img5.png'),
           name: '位置营销',
           info: '通过分析消费者行为，进行营销广告定投，总体客流量分析、消费热点分析、商铺间分析等' },
-        { icon: '',
+        { img: require('../assets/images/airport-img6.png'),
           name: '智能管理',
           info: '掌握机场用户轨迹、停留时间，掌握用户流峰谷，更合理的疏通客流，调整布局疏导时段' }
       ],
       platform: [
         {
-          icon: '',
+          icon: require('../assets/images/airport-platform1.png'),
           info: '航班服务模块'
         },
         {
-          icon: '',
-          info: '旅客服务模块'
-        }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform2.png'),
           info: '综合交通模块'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform3.png'),
           info: '信息查询模块'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform4.png'),
           info: '消息推送模块'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform5.png'),
           info: '室内位置服务模块'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform6.png'),
           info: '在线支付模块'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform7.png'),
           info: '数据存储系统'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform8.png'),
           info: '设备管理系统'
         }, {
-          icon: '',
+          icon: require('../assets/images/airport-platform9.png'),
           info: '内容发布系统'
+        }, {
+          icon: require('../assets/images/airport-platform10.png'),
+          info: '旅客服务模块'
         }
       ]
     }
@@ -163,10 +166,10 @@ export default {
   position: relative;
 }
 
-.content .airport .lists .item .icon {
+.content .airport .lists .item .img {
   width: 58px;
   height: 58px;
-  background: rgba(98, 151, 108, 1);
+  background-size: 100% 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -249,7 +252,7 @@ export default {
   width: 58px;
   height: 57px;
   margin: 47px auto 38px;
-  background: rgba(49, 49, 49, 1);
+  background-size: 100% 100%;
 }
 
 .content .platform .lists .item .info {
