@@ -245,7 +245,7 @@ export default {
   /* letter-spacing: 0.07px; */
 }
 .content .functional {
-  width: 1920px;
+  width: 100%;
   height: 1300px;
   padding-top: 101px;
   background: rgba(255, 255, 255, 1);
@@ -294,9 +294,10 @@ export default {
   font-weight: 400;
   color: rgba(87, 87, 87, 1);
   line-height: 36px;
+  align-self: center;
 }
 .content .process {
-  width: 1920px;
+  width: 100%;
   height: 700px;
   padding-top: 101px;
   background: rgba(238, 238, 238, 1);

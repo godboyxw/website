@@ -3,9 +3,7 @@
        :style="{backgroundImage:'url('+backgroundImage+')'}">
     <div class="wrapper"
          :style="{backgroundColor:backgroundColor}">
-      <div class="avatar"><img class="image"
-             src="@/assets/images/geogoon.png">
-      </div>
+      <div class="avatar"></div>
       <navBar class="nav"></navBar>
     </div>
     <div class="title">{{title}}</div>
@@ -42,6 +40,7 @@ export default {
   width: 100%;
   height: 699px;
   position: relative;
+  background-size: 100% 100%;
 }
 .header .wrapper {
   width: 100%;
@@ -54,11 +53,8 @@ export default {
   left: 466px;
   top: 8px;
   overflow: hidden;
-}
-
-.header .avater .image {
-  width: 100%;
-  height: 100%;
+  background-image: url("../assets/images/geogoon.png");
+  background-size: 100% 100%;
 }
 
 .header .nav {

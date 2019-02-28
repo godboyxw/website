@@ -4,6 +4,7 @@ import Airport from '@/components/Airport'
 import Park from '@/components/Park'
 import Mall from '@/components/Mall'
 import Ads from '@/components/Ads'
+import Tour from '@/components/Tour'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
     path: '/ads',
     name: 'Ads',
     component: Ads
+  },
+  {
+    path: '/tour',
+    name: 'Tour',
+    component: Tour
   }
   ]
 })

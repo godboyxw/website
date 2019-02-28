@@ -13,7 +13,7 @@
         <li class="text3"></li>
         <li class="text4">根据搜索意图和意图准备推荐,让高潜用户立即找到你.</li>
       </ul>
-      <div class="btn">查看详情</div>
+      <div class="details">查看详情</div>
     </div>
     <div class="content">
       <div class="core">
@@ -24,7 +24,7 @@
           <li>为实体商业，提供运营整体解决方案，驱动实体商业客流经营的数字化。</li>
         </ul>
         <div class="title">核心服务</div>
-        <div class="detail">
+        <!-- <div class="detail">
           <div class="location">
             <div class="name">智能导航</div>
             <div class="info">提供高精度室内外定位、2D/3D地图展示、全楼层的POI检索、路径规划及导航等功能，提供灵活、易用的软件开发包（SDK、API）。</div>
@@ -45,7 +45,8 @@
               <div class="info">融合室内外定位技术、人工智能（AI）、物联网技术，自主研发多源智能感知服务平台，实现对线下用户的数字化识别和空间场景感知。</div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <coreService></coreService>
       </div>
       <goodsService></goodsService>
       <div class="solution">
@@ -58,9 +59,11 @@
 
 <script>
 import goodsService from '../Common/goodsService'
+import coreService from '../Common/coreService'
 export default {
   components: {
-    goodsService
+    goodsService,
+    coreService
   },
   data () {
     return {
@@ -141,7 +144,7 @@ export default {
   color: rgba(255, 255, 255, 1);
   line-height: 48px;
 }
-.ads .header .btn {
+.ads .header .details {
   width: 208px;
   height: 59px;
   margin: 0 0 0 370px;
@@ -152,8 +155,8 @@ export default {
   font-family: SourceHanSansCN-Regular;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
-  padding-bottom: 15.5px;
   text-align: center;
+  line-height: 61px;
 }
 .content .core {
   overflow: hidden;
@@ -179,7 +182,7 @@ export default {
   line-height: 40px;
 }
 .content .core .detail {
-  width: 1920px;
+  width: 100%;
   height: 740px;
   padding: 98px 0 82px 336px;
   font-size: 0;
