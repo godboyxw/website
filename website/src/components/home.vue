@@ -22,41 +22,43 @@
           </div>
         </li>
       </ul>
-      <ul class="slider"
-          v-if="isShow">
-        <router-link class="link"
-                     to="/sports">
-          <li class="item">体育场馆</li>
-        </router-link>
-        <router-link class="link"
-                     to="/social">
-          <li class="item">社交联络</li>
-        </router-link>
-        <router-link class="link"
-                     to="/display">
-          <li class="item">会展博览</li>
-        </router-link>
-        <router-link class="link"
-                     to="/tour">
-          <li class="item">旅游观光</li>
-        </router-link>
-        <router-link class="link"
-                     to="/ads">
-          <li class="item">广告营销</li>
-        </router-link>
-        <router-link class="link"
-                     to="/airport">
-          <li class="item">智慧机场</li>
-        </router-link>
-        <router-link class="link"
-                     to="/park">
-          <li class="item">泊车寻车</li>
-        </router-link>
-        <router-link class="link"
-                     to="/mall">
-          <li class="item">智慧商场</li>
-        </router-link>
-      </ul>
+      <transition name="fade">
+        <ul class="slider"
+            v-if="isShow">
+          <router-link class="link"
+                       to="/sports">
+            <li class="item">体育场馆</li>
+          </router-link>
+          <router-link class="link"
+                       to="/social">
+            <li class="item">社交联络</li>
+          </router-link>
+          <router-link class="link"
+                       to="/display">
+            <li class="item">会展博览</li>
+          </router-link>
+          <router-link class="link"
+                       to="/tour">
+            <li class="item">旅游观光</li>
+          </router-link>
+          <router-link class="link"
+                       to="/ads">
+            <li class="item">广告营销</li>
+          </router-link>
+          <router-link class="link"
+                       to="/airport">
+            <li class="item">智慧机场</li>
+          </router-link>
+          <router-link class="link"
+                       to="/park">
+            <li class="item">泊车寻车</li>
+          </router-link>
+          <router-link class="link"
+                       to="/mall">
+            <li class="item">智慧商场</li>
+          </router-link>
+        </ul>
+      </transition>
     </div>
     <img src="./images/back.png"
          style="width: 100%; height: 450px;" />
@@ -396,6 +398,14 @@ export default {
   left: 28%;
   top: 50px;
   font-size: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s linear;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 .container .top .slider .link {
   display: inline-block;
