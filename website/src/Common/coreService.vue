@@ -34,6 +34,7 @@ export default {
   width: 100%;
   height: 740px;
   padding: 98px 0 82px 336px;
+  box-sizing: border-box;
   font-size: 0;
   background: rgba(41, 43, 56, 1);
 }

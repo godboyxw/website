@@ -198,6 +198,7 @@ export default {
 .content .info {
   width: 100%;
   padding: 157px 0 370px 361px;
+  box-sizing: border-box;
   position: relative;
 }
 .content .info .text {
@@ -213,145 +214,11 @@ export default {
   width: 434px;
   height: 866px;
   position: absolute;
-  right: 361px;
+  left: 1125px;
   top: -348px;
   /* box-shadow: 0px 1px 21px 0px rgba(35, 35, 89, 0.58); */
   background-image: url("../assets/images/IPhoneX.png");
   background-size: 100% 100%;
-}
-.content .core .title {
-  width: 287px;
-  height: 70px;
-  margin: 0 auto 64px;
-  font-size: 70px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(64, 31, 6, 1);
-  line-height: 40px;
-}
-.content .core .detail {
-  width: 100%;
-  height: 740px;
-  padding: 98px 0 82px 336px;
-  font-size: 0;
-  background: rgba(41, 43, 56, 1);
-}
-.content .core .detail .location {
-  display: inline-block;
-  width: 600px;
-  height: 560px;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.6);
-  background-image: url("../assets/images/ads-core-location.png");
-  background-size: cover;
-}
-.content .core .detail .location .name {
-  margin: 380px 0 30px 43px;
-  font-size: 37px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  line-height: 43px;
-}
-.content .core .detail .location .info {
-  width: 525px;
-  height: 87px;
-  margin: 0 44px 0 31px;
-  font-size: 24px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: bold;
-  color: rgba(238, 238, 238, 1);
-  line-height: 31px;
-}
-.content .core .detail .others {
-  display: inline-block;
-  width: 600px;
-  height: 560px;
-  background: rgba(0, 0, 0, 0.6);
-}
-.content .core .detail .others .wrapper {
-  width: 600px;
-  height: 270px;
-  background: rgba(0, 0, 0, 0.6);
-  font-size: 0;
-}
-.content .core .detail .others .wrapper .car,
-.content .core .detail .others .wrapper .news {
-  display: inline-block;
-  width: 300px;
-  height: 270px;
-  background: rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-}
-.content .core .detail .others .wrapper .car {
-  background-image: url("../assets/images/ads-core-car.png");
-  background-size: cover;
-}
-.content .core .detail .others .wrapper .news {
-  background-image: url("../assets/images/ads-core-news.png");
-  background-size: cover;
-}
-.content .core .detail .others .wrapper .car .name {
-  margin: 123px 0 13px 30px;
-  font-size: 30px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  line-height: 21px;
-}
-.content .core .detail .others .wrapper .car .info {
-  width: 247px;
-  height: 85px;
-  margin-left: 33px;
-  font-size: 24px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(238, 238, 238, 1);
-  line-height: 30px;
-}
-.content .core .detail .others .wrapper .news .name {
-  margin: 124px 0 28px 31px;
-  font-size: 30px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  line-height: 21px;
-}
-.content .core .detail .others .wrapper .news .info {
-  width: 247px;
-  height: 57px;
-  margin-left: 24px;
-  font-size: 24px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  line-height: 32px;
-}
-.content .core .detail .others .service {
-  width: 600px;
-  height: 290px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-image: url("../assets/images/ads-core-service.png");
-  background-size: cover;
-}
-.content .core .detail .others .service .name {
-  margin: 134px 0 22px 45px;
-  font-size: 30px;
-  font-family: MicrosoftYaHei;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 1);
-  line-height: 21px;
-}
-.content .core .detail .others .service .info {
-  margin-left: 27px;
-  width: 505px;
-  height: 87px;
-  font-size: 24px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: bold;
-  color: rgba(238, 238, 238, 1);
-  line-height: 31px;
 }
 .content .whole {
   width: 100%;
@@ -369,6 +236,7 @@ export default {
 }
 .content .whole .lists {
   padding: 0 341px 82px 341px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 .content .whole .lists :after {

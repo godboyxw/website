@@ -307,16 +307,11 @@ export default {
   line-height: 30px;
 }
 .content .manage {
-  width: 100%;
   height: 750px;
   padding-top: 70px;
-  /* position: relative; */
   background: rgba(238, 238, 238, 1);
 }
 .content .manage .title {
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%); */
   width: 182px;
   margin: 0 auto 50px;
   font-size: 44px;
@@ -326,10 +321,6 @@ export default {
   line-height: 30px;
 }
 .content .manage .info {
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 164px; */
   width: 775px;
   margin: 0 auto 71px;
   font-size: 16px;
@@ -340,7 +331,8 @@ export default {
 }
 .content .manage .lists {
   width: 100%;
-  padding: 0 494px;
+  padding: 0 492px 0 494px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 .content .manage .lists:after {
@@ -354,7 +346,6 @@ export default {
   width: 33.333%;
   height: 499px;
   float: left;
-  /* background: red; */
 }
 .content .manage .lists .item .avatar {
   width: 150px;
