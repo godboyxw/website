@@ -61,7 +61,7 @@
       </transition>
     </div>
     <img src="./images/back.png"
-         style="width: 100%; height: 450px;" />
+         style="width: 100%; height: 100%;" />
     <!-- 平台优势 -->
     <div class="advantage">
       <div class="a_txt">平台优势</div>

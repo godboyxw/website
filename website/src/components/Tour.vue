@@ -220,6 +220,16 @@ export default {
   background-image: url("../assets/images/IPhoneX.png");
   background-size: 100% 100%;
 }
+.content .core .title {
+  width: 287px;
+  height: 70px;
+  margin: 0 814px 64px 819px;
+  font-size: 70px;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  color: rgba(64, 31, 6, 1);
+  line-height: 40px;
+}
 .content .whole {
   width: 100%;
   overflow: hidden;
